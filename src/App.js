@@ -23,25 +23,23 @@ const App = () => {
 
   return ( 
       <Router>
-
-          {
-            user ? 
-            (
+      {
+           user ? 
+            (<>
              <Routes>
               <Route path='/dashboard' element={<Dashborad/>}/>
              </Routes>
+             </>
             ) 
             :
-            ( 
+            ( <>
              <Routes>
                <Route path='/' element={<Login/>}/>
              </Routes>
-            )
-              
-          }
+             </>
+          )      
+      }
       </Router>
-      
-
   )
 }
 
